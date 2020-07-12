@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+    The Athletic Records
+	</title>
+</head>
+<style type="text/css">
+	body
+	{
+		background-color:#dcd6f7;
+	}
+	.teja{
+		position:absolute;
+		left:35%;
+		top:10%;
+	}
+</style>
+<body>
+  {% for p in a  %}
+  <div class="bg">
+  <div class="teja">
+  <TABLE BORDER="5"    WIDTH="250px"   CELLPADDING="4" CELLSPACING="1">
+   <TR>
+      <TH COLSPAN="2"><img src="{{p.image}}" height="300px" width="250px">
+      </TH>
+   </TR>
+ 
+     <TR ALIGN="CENTER">
+      <TD>Place</TD>
+      <TD>{{p.place}}</TD>
+   </TR>
+
+   <TR ALIGN="CENTER">
+      <TD>No of participants</TD>
+      <TD>{{p.no_of_part}}</TD>
+   </TR>
+   <TR ALIGN="CENTER">
+      <TD>Dates</TD>
+      <TD>{{p.date_year}} - {{p.end_date}}</TD>
+   </TR>
+</TABLE>
+</div>
+</div>
+{% endfor %}
+</body>
+</html>
+

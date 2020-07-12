@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Montserrat:900|Raleway:400,400i,700,700i);
+/*** FONTS ***/
+/*** VARIABLES ***/
+/* Colors */
+/*** EXTEND ***/
+/* box-shadow */
+ ol.gradient-list > li, ol.gradient-list > li::before {
+   box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+}
+/*** STYLE ***/
+ *, *:before, *:after {
+   box-sizing: border-box;
+}
+ html, body {
+   margin: 0;
+   padding: 0;
+}
+ body {
+   background-color: #fafafa;
+   color: #1d1f20;
+   font-family: 'Raleway', sans-serif;
+}
+ main {
+   display: block;
+   margin: 0 auto;
+   max-width: 40rem;
+   padding: 1rem;
+}
+ ol.gradient-list {
+   counter-reset: gradient-counter;
+   list-style: none;
+   margin: 1.75rem 0;
+   padding-left: 1rem;
+}
+ ol.gradient-list > li {
+   background: white;
+   border-radius: 0 0.5rem 0.5rem 0.5rem;
+   counter-increment: gradient-counter;
+   margin-top: 1rem;
+   min-height: 3rem;
+   padding: 1rem 1rem 1rem 3rem;
+   position: relative;
+}
+ ol.gradient-list > li::before, ol.gradient-list > li::after {
+   background: linear-gradient(135deg, #83e4e2 0%, #a2ed56 100%);
+   border-radius: 1rem 1rem 0 1rem;
+   content: '';
+   height: 3rem;
+   left: -1rem;
+   overflow: hidden;
+   position: absolute;
+   top: -1rem;
+   width: 3rem;
+}
+ ol.gradient-list > li::before {
+   align-items: flex-end;
+   content: counter(gradient-counter);
+   color: #1d1f20;
+   display: flex;
+   font: 900 1.5em/1 'Montserrat';
+   justify-content: flex-end;
+   padding: 0.125em 0.25em;
+   z-index: 1;
+}
+ ol.gradient-list > li:nth-child(10n+1):before {
+   background: linear-gradient(135deg, rgba(162, 237, 86, 0.2) 0%, rgba(253, 220, 50, 0.2) 100%);
+}
+ ol.gradient-list > li:nth-child(10n+2):before {
+   background: linear-gradient(135deg, rgba(162, 237, 86, 0.4) 0%, rgba(253, 220, 50, 0.4) 100%);
+}
+ ol.gradient-list > li:nth-child(10n+3):before {
+   background: linear-gradient(135deg, rgba(162, 237, 86, 0.6) 0%, rgba(253, 220, 50, 0.6) 100%);
+}
+ ol.gradient-list > li:nth-child(10n+4):before {
+   background: linear-gradient(135deg, rgba(162, 237, 86, 0.8) 0%, rgba(253, 220, 50, 0.8) 100%);
+}
+ ol.gradient-list > li:nth-child(10n+5):before {
+   background: linear-gradient(135deg, rgba(162, 237, 86, 1) 0%, rgba(253, 220, 50, 1) 100%);
+}
+ ol.gradient-list > li:nth-child(10n+6):before {
+   background: linear-gradient(135deg, rgba(162, 237, 86, 0.8) 0%, rgba(253, 220, 50, 0.8) 100%);
+}
+ ol.gradient-list > li:nth-child(10n+7):before {
+   background: linear-gradient(135deg, rgba(162, 237, 86, 0.6) 0%, rgba(253, 220, 50, 0.6) 100%);
+}
+ ol.gradient-list > li:nth-child(10n+8):before {
+   background: linear-gradient(135deg, rgba(162, 237, 86, 0.4) 0%, rgba(253, 220, 50, 0.4) 100%);
+}
+ ol.gradient-list > li:nth-child(10n+9):before {
+   background: linear-gradient(135deg, rgba(162, 237, 86, 0.2) 0%, rgba(253, 220, 50, 0.2) 100%);
+}
+ ol.gradient-list > li:nth-child(10n+10):before {
+   background: linear-gradient(135deg, rgba(162, 237, 86, 0) 0%, rgba(253, 220, 50, 0) 100%);
+}
+ ol.gradient-list > li + li {
+   margin-top: 2rem;
+}
+ 
+    </style>
+    <style >
+      
+      <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSI78wq2oDc_2R4DL6jU3aZdG0xfaezahFC5lFOad8_gRy3qfhZ">
+
+* {
+  box-sizing: inherit;
+  transition-property: all;
+  transition-duration: .6s;
+  transition-timing-function: ease;
+}
+
+ div.athleticbackgroundimage2 img {
+      width: 100%;
+      height: 100%;
+          background-repeat: no-repeat;
+         background-attachment: fixed;
+         position: fixed;
+         top:45px;  
+         left:0px;
+        }
+
+
+   .navbar {
+    font-family: 'Bellota', cursive;
+    background-color: black;
+  width: 100%;
+  overflow: hidden;
+   position: fixed;
+  top: 0; 
+  left:15%;
+  width: 100%; 
+    z-index:300;
+
+  
+}
+
+/* Navbar links */
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #da8065;
+}
+
+/*images gallery*/
+
+div.gallery {
+  overflow: hidden;
+  margin: 5px;
+  border: 1px solid #ccc;
+  position: relative;
+  left: 250px;
+  top:150px;
+  font-family: 'Bellota', cursive;
+  width: 400px;
+
+  
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+
+}
+
+div.gallery img {
+  opacity: 0.999;
+  width: 100%;
+  height: auto;
+}
+
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(1, 1, 1);
+  background: rgba(0, 0, 0, 0.5); 
+  color: yellow; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:1;
+  color:yellow;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+
+  -webkit-mask-image: linear-gradient(-75deg, rgba(1,1,0,1) 30%, #1a0102 50%, rgba(1,1,0,1) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
+
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0,1);
+  transform: scale(0,1);
+}
+
+.container:hover .overlay {
+  opacity: 1;
+  font-weight: bold;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+
+
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  font-family: 'Bellota', cursive;
+}
+
+
+  <style>
+@import url('https://fonts.googleapis.com/css?family=Bellota&display=swap');
+
+.teja23
+{
+  position: center;
+}
+
+
+    </style>
+
+
+    <script type="text/javascript">
+      function getQuote() {
+        // Create the arrays
+        var quotes = new Array(8);
+        var sources = new Array(8);
+
+        // Initialize the arrays with quotes
+        quotes[0] = "I don’t count my situps. I only start counting once it starts hurting.";
+        sources[0] = "Muhammad Ali";
+
+        quotes[1] = "I’ve failed over and over again in my life. And that is why I succeed.";
+        sources[1] = "Michael Jordan";
+
+        quotes[2] = "The only way to prove you are a good sport is to lose.";
+        sources[2] = " Ernie Banks";
+
+        quotes[3] = "If you fail to prepare, you’re prepared to fail.";
+        sources[3] = "Mark Spitz";
+
+         quotes[4] = "Forget Fear, Do Something Different.";
+        sources[4] = "MS Dhoni";
+
+         quotes[5] = "You Don’t play for the crowd, You are play for the country.";
+        sources[5] = "MS Dhoni";
+
+         quotes[6] = "Never say never because limits, like fears, are often just an illusion.";
+        sources[6] = "Michael Jordan";
+
+         quotes[7] = "You have to be able to accept failure to get better.";
+        sources[7] = "LeBron James";
+
+         quotes[8] = "You can't be afraid to fail. It's the only way you succeed - you're not gonna succeed all the time, and I know that.";
+        sources[8] = "LeBron James";
+
+
+
+
+
+        // Get a random index into the arrays
+        i = Math.floor(Math.random() * quotes.length);
+
+        // Write out the quote as HTML
+        document.write("<p style='background-color: #ffb6c1;position:fixed; border-color=white;border-width: thick;text-align:center'>\"");
+        document.write(quotes[i] + "\"");
+        document.write("<em>- " + sources[i] + "</em>");
+        document.write("</p>");
+      }
+     
+
+
+
+
+
+  </script>
+  </head>
+
+  <body>
+    <div class="teja1 navbar">
+    <div class="teja23">
+     <script type="text/javascript">
+
+      getQuote();
+ 
+    </script>
+
+</div>
+</div>
+
+<div> 
+</div>
+
+<div class="athleticbackgroundimage2">
+       
+          <img src="https://images.unsplash.com/photo-1502904550040-7534597429ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1249&q=80"
+          </a>
+      </div>
+
+
+  
+
+<div class="container">
+<div class="gallery">
+  <a >
+    <img src="https://www.thesportsman.com/media/images/generic-square-social.png" alt="Mountains" width="600" height="400">
+     <div class="overlay"><a href={% url "project:eigth" %}>Sportsman</a></div>
+  </a>
+</div>
+</div>
+<div class="container">
+<div class="gallery">
+  <a >
+    <img src="https://albertbolt.s3.ap-south-1.amazonaws.com/sports/olympic.jfif" alt="Cinque Terre" width="600" height="400">
+    <div class="overlay"><a href={% url "project:knowaboutolympicyear1" %}>Know about an olympic year</a></div>
+  </a>
+</div>
+</div>
+
+
+<div class="container">
+<div class="gallery">
+  <a >
+    <img src="https://img.clipartlook.com/annual-financial-report-clipart-cliparthut-free-clipart-report-clipart-800_626.jpg" alt="Cinque Terre" width="600" height="400">
+    <div class="overlay"><a href={% url "project:seven" %}>Records</a></div>
+  </a>
+</div>
+</div>
+
+<div class="container">
+<div class="gallery">
+  <a >
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRI0NHvj8oNJlaTqLOmLtqifGGP1S0If9gw28agDU1QIMZlyc0u" alt="Cinque Terre" width="600" height="400">
+    <div class="overlay"><a href={% url "project:nine" %}>Competition and Events</a></div>
+  </a>
+</div>
+</div>
+
+<div class="container">
+<div class="gallery">
+  <a >
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-bN_I37xygrmvZHZp0KO3vRuOsUNG_WFhAVAIZ2CAUghplasptQ&s" alt="Cinque Terre" width="600" height="400">
+    <div class="overlay"><a href={% url "project:sixth" %}>Sports Wise Records</a></div>
+  </a>
+</div>
+</div>
+
+
+<div class="container">
+<div class="gallery">
+  <a >
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1MUo2YAJCZp0rPiAZlqzb87Rp4HZpUXR4tayM53Ynh45IUy_4qw&s" alt="Cinque Terre" width="600" height="400">
+    <div class="overlay"><a href={% url "project:eleven" %}>Visual Representation of Sportsman</a></div>
+  </a>
+</div>
+</div>
+
+<div class="container">
+<div class="gallery">
+  <a >
+    <img src="https://albertbolt.s3.ap-south-1.amazonaws.com/videoicon.jpg" alt="Cinque Terre" width="600" height="400">
+    <div class="overlay"><a href={% url "project:videosyou" %}>Videos of Best Performances</a></div>
+  </a>
+
+</div>
+</div>
+
+ <!--<main>
+  <ol class="gradient-list">
+    <li>Sportsman info</li>
+    <li>Olympic info</li>
+    <li>Records</li>
+    <li>Competition and Events</li>
+    <li>Sports wise records</li>
+    <li>visual representation</li>
+    <li>Videos of goats</li>
+  -->
+
+  </ol>
+</main>
+  </body>
+</html>

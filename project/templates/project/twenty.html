@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+    The Athletic Records
+	</title>
+</head>
+<style type="text/css">
+	body
+	{
+		background-color:#dcd6f7;
+	}
+	.teja{
+		position:absolute;
+		left:35%;
+		top:10%;
+	}
+</style>
+<body>
+  {% for p in a  %}
+  <div class="bg">
+  <div class="teja">
+  <TABLE BORDER="5"    WIDTH="250px"   CELLPADDING="4" CELLSPACING="1">
+   <TR>
+      <TH COLSPAN="2"><img src="{{p.image}}" height="300px" width="250px">
+      </TH>
+   </TR>
+  
+   <TR ALIGN="CENTER">
+      <TD>Name</TD>
+      <TD>{{p.name}}</TD>
+   </TR>
+     <TR ALIGN="CENTER">
+      <TD>Nationality</TD>
+      <TD>{{p.place_of_birth}}</TD>
+   </TR>
+
+   <TR ALIGN="CENTER">
+      <TD>Age</TD>
+      <TD>{{p.age}}</TD>
+   </TR>
+   <TR ALIGN="CENTER">
+      <TD>Height(in cm)</TD>
+      <TD>{{p.height}}</TD>
+   </TR>
+</TABLE>
+</div>
+</div>
+{% endfor %}
+</body>
+</html>
+
